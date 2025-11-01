@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Formulaire d'inscription</title>
+</head>
+<body>
+  <main>
+    <h1>Formulaire d'inscription</h1>
+
+    <form action="/submit" method="post" autocomplete="on">
+      <div>
+        <label for="fullname">Nom complet :</label><br />
+        <input
+          id="fullname"
+          name="fullname"
+          type="text"
+          placeholder="Votre nom complet"
+          minlength="3"
+          required
+          aria-describedby="fullnameHelp"
+        />
+        <div id="fullnameHelp" role="note">Veuillez entrer un nom d'au moins 3 caractères.</div>
+      </div>
+
+      <div>
+        <label for="email">Email :</label><br />
+        <input
+          id="email"
+          name="email"
+          type="email"
+          placeholder="adresse@example.com"
+          required
+          aria-describedby="emailHelp"
+        />
+        <div id="emailHelp" role="note">Veuillez entrer une adresse email valide.</div>
+      </div>
+
+      <div>
+        <label for="password">Mot de passe :</label><br />
+        <input
+          id="password"
+          name="password"
+          type="password"
+          placeholder="Mot de passe"
+          minlength="6"
+          required
+          aria-describedby="passwordHelp"
+        />
+        <div id="passwordHelp" role="note">Le mot de passe doit contenir au moins 6 caractères.</div>
+      </div>
+
+      <div>
+        <button type="submit">S'inscrire</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>
